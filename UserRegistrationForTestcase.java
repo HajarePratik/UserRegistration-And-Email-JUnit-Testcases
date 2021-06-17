@@ -28,4 +28,16 @@ public class UserRegistrationForTestcase {
 		m = p.matcher(lastname);
 		return m.matches();
 	}
+	
+	// UC3 Method to validate the email address
+	public static boolean isvalidemail(String email) 
+	{
+		Pattern p;
+		Matcher m;
+		//Regex to check valid email address
+		String  regex = "^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?";	
+		p = Pattern.compile(regex);
+		m = p.matcher(email);
+		return m.matches();
+	}
 }

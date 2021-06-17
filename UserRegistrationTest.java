@@ -19,8 +19,17 @@ public class UserRegistrationTest {
 	@Test
 	public void Testing_validatelastname() 
 	{
-		UserRegistrationForTestcase firstname = new UserRegistrationForTestcase();
-		boolean result = firstname.isvalidfirstname("Hajare");
+		UserRegistrationForTestcase lastname = new UserRegistrationForTestcase();
+		boolean result = lastname.isvalidlastname("Hajare");
+		Assert.assertEquals(true, result);
+	}
+	
+	// Test 3 : Testing Email Address
+	@Test
+	public void Testing_validateemail() 
+	{
+		UserRegistrationForTestcase email = new UserRegistrationForTestcase();
+		boolean result = UserRegistrationForTestcase.isvalidemail("pratikhajare09@gmail.com");
 		Assert.assertEquals(true, result);
 	}
 }
