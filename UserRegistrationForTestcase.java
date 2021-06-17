@@ -40,4 +40,16 @@ public class UserRegistrationForTestcase {
 		m = p.matcher(email);
 		return m.matches();
 	}
+	
+	// UC4 Method to validate the mobile number
+	public static boolean isvalidmobileno(String mobileno) 
+	{
+		Pattern p;
+		Matcher m;
+		//Regex to check valid mobile number
+		String  regex = "(0|91)?\\s([7-9][0-9]{9})";
+		p = Pattern.compile(regex);
+		m = p.matcher(mobileno);
+		return m.matches();
+	}
 }

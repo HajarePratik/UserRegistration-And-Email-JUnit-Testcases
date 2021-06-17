@@ -32,4 +32,13 @@ public class UserRegistrationTest {
 		boolean result = UserRegistrationForTestcase.isvalidemail("pratikhajare09@gmail.com");
 		Assert.assertEquals(true, result);
 	}
+	
+	// Test 4 : Testing Mobile No.
+	@Test
+	public void Testing_validatemobileno() 
+	{
+		UserRegistrationForTestcase mobileno = new UserRegistrationForTestcase();
+		boolean result = UserRegistrationForTestcase.isvalidmobileno("91 9850962452");
+		Assert.assertEquals(true, result);
+	}
 }
