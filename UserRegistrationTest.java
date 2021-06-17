@@ -41,4 +41,30 @@ public class UserRegistrationTest {
 		boolean result = UserRegistrationForTestcase.isvalidmobileno("91 9850962452");
 		Assert.assertEquals(true, result);
 	}
+	
+	// Test 5 : Testing Password, Rule 1 : should have atleast 8 characters
+	@Test
+	public void testValidPassword() {
+		UserRegistrationForTestcase password = new UserRegistrationForTestcase();
+		boolean result = password.isvalidpassword("pratik09");
+		Assert.assertEquals(true, result);
+	}
+
+	//UC7 Rule 2 & 3 : should have atleast one number & should have atleast one uppercase letter
+	@Test
+	public void testValidPassword2() {
+		UserRegistrationForTestcase password = new UserRegistrationForTestcase();
+		boolean result = password.isvalidpassword("Pra09");
+		Assert.assertEquals(true, result);
+	}
+	
+	//UC8 Rule 4 : should have atleast one special character
+	@Test
+	public void testValidPassword3() {
+		UserRegistrationForTestcase password = new UserRegistrationForTestcase();
+		boolean result = password.isvalidpassword("prA09@$");
+		Assert.assertEquals(true, result);
+	}
+	
+	
 }

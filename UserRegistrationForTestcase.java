@@ -52,4 +52,25 @@ public class UserRegistrationForTestcase {
 		m = p.matcher(mobileno);
 		return m.matches();
 	}
+	
+	/* 
+	 * UC5 Method to validate the password :
+	 * Rule 1 : should have atleast 8 characters
+	 * 
+	 * UC6 Rule 2 : should have atleast one uppercase letter
+	 * 
+	 * UC7 Rule 3 : should have atleast one number
+	 * 
+	 * UC8 Rule 4 : should have atleast one special character
+	 */
+	public boolean isvalidpassword(String password) 
+	{
+		Pattern p;
+		Matcher m;
+		//Regex to check valid password
+		String  regex = "^[a-zA-Z0-9]+[@#$%&*_+=!?]{0,8}$";
+		p = Pattern.compile(regex);
+		m = p.matcher(password);
+		return m.matches();
+	}
 }
