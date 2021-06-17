@@ -15,4 +15,12 @@ public class UserRegistrationTest {
 		Assert.assertEquals(true, result);
 	}
 
+	// Test 2 : Last name starts with capital letter and has minimum 3 characters
+	@Test
+	public void Testing_validatelastname() 
+	{
+		UserRegistrationForTestcase firstname = new UserRegistrationForTestcase();
+		boolean result = firstname.isvalidfirstname("Hajare");
+		Assert.assertEquals(true, result);
+	}
 }

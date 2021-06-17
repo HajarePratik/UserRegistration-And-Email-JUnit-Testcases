@@ -16,4 +16,16 @@ public class UserRegistrationForTestcase {
 		m = p.matcher(firstname);
 		return m.matches();
 	}
+	
+	// UC2 Method to validate the lastname
+	public boolean isvalidlastname(String lastname) 
+	{
+		Pattern p;
+		Matcher m;
+		//Regex to check valid lastname
+		String  regex = "^[A-Z]{1}[a-z]{2,}";
+		p = Pattern.compile(regex);
+		m = p.matcher(lastname);
+		return m.matches();
+	}
 }
