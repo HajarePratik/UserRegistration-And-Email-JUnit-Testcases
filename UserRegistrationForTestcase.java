@@ -42,7 +42,7 @@ public class UserRegistrationForTestcase {
 	public static boolean isvalidmobileno(String mobileno) 
 	{
 		//Regex to check valid mobile number
-		String  regex = "(0|91)?\\s([7-9][0-9]{9})";
+		String  regex = "[9]{1}[1]{1}\\s([7-9][0-9]{9})";
 		pattern = Pattern.compile(regex);
 		match = pattern.matcher(mobileno);
 		return match.matches();
