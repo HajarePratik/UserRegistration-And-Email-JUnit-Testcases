@@ -8,10 +8,10 @@ public class UserRegistrationTest {
 	
 	// Test 1 : First name starts with capital letter and has minimum 3 characters
 	@Test
-	public void Testing_validatefirstname() 
+	public void testing_validatefirstname() 
 	{
-		UserRegistrationForTestcase firstname = new UserRegistrationForTestcase();
-		boolean result = firstname.isvalidfirstname("Pratik");
+		UserRegistrationForTestcase user = new UserRegistrationForTestcase();
+		boolean result = user.isvalidfirstname("Pratik");
 		Assert.assertEquals(true, result);
 	}
 
