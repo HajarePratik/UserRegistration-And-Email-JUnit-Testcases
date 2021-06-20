@@ -5,15 +5,16 @@ import java.util.regex.Pattern;
 
 public class UserRegistrationForTestcase {
 	
+	Pattern pattern;
+	Matcher match;
+	
 	// UC1 Method to validate the firstname
 	public boolean isvalidfirstname(String firstname) 
 	{
-		Pattern p;
-		Matcher m;
 		//Regex to check valid firstname
 		String  regex = "^[A-Z]{1}[a-z]{2,}";
-		p = Pattern.compile(regex);
-		m = p.matcher(firstname);
-		return m.matches();
+		pattern = Pattern.compile(regex);
+		match = pattern.matcher(firstname);
+		return match.matches();
 	}
 }
